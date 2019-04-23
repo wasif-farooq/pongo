@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1>Socket Connected</h1>
+
+        <script src="/static/socket.io.js"></script>
+        <script>
+          var socket = io('/chat');
+          socket.on('connect', function(){
+            console.log('connected')
+            socket.emit('chat_message', 'this is  a message');
+          });
+
+          socket.on('chat_reply', function(data){
+              console.log("data : ", data)
+            });
+
+          socket.on('disconnect', function(){
+            console.log('disconnected')
+          });
+        </script>
+
+    </body>
+</html>
