@@ -8,7 +8,7 @@ sio.attach(app)
 
 async def index(request):
     """Serve the client-side application."""
-    with open('index.html') as f:
+    with open('ui/index.html') as f:
         return web.Response(text=f.read(), content_type='text/html')
 
 @sio.on('connect', namespace='/chat')
@@ -24,7 +24,7 @@ async def message(sid, data):
 def disconnect(sid):
     print('disconnect ', sid)
 
-app.router.add_static('/static', 'static')
+app.router.add_static('/static', 'ui/static')
 app.router.add_get('/', index)
 
 if __name__ == '__main__':
