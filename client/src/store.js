@@ -1,4 +1,8 @@
-import { applyMiddleware, createStore } from 'redux'
+import { configureStore } from 'redux-starter-kit'
+import rootReducer from './reducers'
 
+const store = configureStore({
+  reducer: rootReducer
+})
 
-const store = createStore()
+export default store
