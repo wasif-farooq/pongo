@@ -22,3 +22,5 @@ export function subscribeConversation() {
         }),
     });
 }
+// here is the link
+// http://nmajor.com/posts/using-socket-io-with-redux-websocket-redux-middleware
