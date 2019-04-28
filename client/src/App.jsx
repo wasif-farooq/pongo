@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
-import { GET_COLLECTIONS } from 'Application/Constants';
+import {
+    HashRouter as Router,
+    Route,
+    Switch
+} from "react-router-dom";
+import Main from 'Components/Main';
+import Connection from 'Components/Connection';
 
 class App extends Component {
 
   render() {
     return (
-        <Row>
-          <Col>Wasif</Col>
-          <Col>Farooq</Col>
-          <Col>{GET_COLLECTIONS}</Col>
-        </Row>
+        <Router>
+            <Switch>
+                <Route path="/" exact component={Main} />
+                <Route path="/connect" exact component={Connection} />
+            </Switch>
+        </Router>
     );
   }
 }
