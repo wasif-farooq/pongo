@@ -2,3 +2,4 @@ python-socketio
 logging
 bson
 aiohttp
+pymongo

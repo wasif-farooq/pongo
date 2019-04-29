@@ -1,4 +1,4 @@
-export function subscribeMessages() {
+Pexport function subscribeMessages() {
     return {
         event: 'message',
         handle: NEW_MESSAGE,
