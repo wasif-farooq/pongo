@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import Actions from 'Components/Actions';
 import {
     Row,
-    Col
+    Col,
+    ButtonGroup,
+    Button,
+    FormControl
 } from 'react-bootstrap';
 
 class Pagination extends Component {
@@ -9,8 +13,15 @@ class Pagination extends Component {
     return (
       <Row>
           <Col>
-          Pagination
+            <ButtonGroup>
+                <Button>&lt;&lt;</Button>
+                <Button>&lt;</Button>
+                <FormControl type="text" value="0 " size="sm" />
+                <Button>&gt;</Button>
+                <Button>&gt;&gt;</Button>
+            </ButtonGroup>
           </Col>
+          <Actions />
       </Row>
     )
   }
