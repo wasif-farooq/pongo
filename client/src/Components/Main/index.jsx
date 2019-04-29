@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Collections from 'Components/Collections';
+import Collection from 'Components/Collection';
 import Nav from 'Components/Nav';
 import {
     Row,
@@ -17,11 +18,11 @@ class Main extends Component
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={4}>
+                    <Col md={3}>
                         <Collections />
                     </Col>
-                    <Col md={8}>
-                        
+                    <Col md={9}>
+                        <Collection />
                     </Col>
                 </Row>
             </Fragment>
